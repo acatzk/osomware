@@ -17,11 +17,11 @@ export default function Home() {
               <p className="text-secondary-blue">Architecture, Planning, UX/UI Design, Development</p>
               <p className="text-secondary-blue">QA and Project Management</p>
             </div>
-            <div className="space-x-4">
-              <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-9 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+            <div className="space-x-3 sm:space-x-4">
+              <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-9 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
                 Get a quote
               </button>
-              <button className="text-secondary-blue hover:text-white hover:bg-primary-indigo px-12 py-3 border hover:border-primary-indigo rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+              <button className="text-secondary-blue hover:text-white hover:bg-primary-indigo px-7 xl:px-12 py-3 border hover:border-primary-indigo rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
                 Portfolio
               </button>
             </div>
