@@ -39,13 +39,18 @@ export default function NavBar () {
       <div className="flex items-center justify-between py-6 px-4">
         <Link href="/">
           <a>
-            <Logo />
+            <span className="hidden lg:block">
+              <LogoLarge />
+            </span>
+            <span className="block lg:hidden">
+              <LogoSmall />
+            </span>
           </a>
         </Link>
         <div> 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="block md:hidden p-1.5 rounded-full hover:bg-indigo-50 focus:bg-indigo-100 focus:text-indigo-600 transition ease-in-out duration-200 focus:outline-none">
+            className="text-primary-blue block md:hidden p-1.5 rounded-full hover:bg-indigo-50 focus:bg-indigo-100 transition ease-in-out duration-200 focus:outline-none">
             <Menu />
           </button>
           <div className="hidden md:block">
@@ -73,7 +78,12 @@ export default function NavBar () {
                   href="/" 
                   className="flex items-center space-x-2">
                   <a>
-                    <Logo />
+                    <span className="hidden lg:block">
+                      <LogoLarge />
+                    </span>
+                    <span className="block lg:hidden">
+                      <LogoSmall />
+                    </span>
                   </a>
                 </Link>
                 <div>
@@ -112,7 +122,7 @@ export default function NavBar () {
   )
 }
 
-const Logo = () => {
+function LogoLarge () {
   return (
     <svg width="170" height="31">
       <path
@@ -136,7 +146,13 @@ const Logo = () => {
   )
 }
 
-const Menu = () => {
+function LogoSmall () {
+  return (
+    <img src="/svgs/logo.svg" />
+  )
+}
+
+function Menu () {
   return (
     <svg className="w-6  h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path fill="none" d="M0 0h24v24H0z" />
@@ -145,7 +161,7 @@ const Menu = () => {
   )
 }
 
-const Close = () => {
+function Close () {
   return (
     <svg 
       className="w-6 h-6" 
