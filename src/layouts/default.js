@@ -6,9 +6,9 @@ export default function Layout ({ children }) {
       <div className="block lg:hidden absolute -top-32 -left-40">
         <img src="/svgs/buble.svg"  />
       </div>
-      <div className="container mx-auto max-w-7xl w-full ">
+      <div className="relative container mx-auto max-w-7xl w-full ">
         <NavBar />
-        <main className="relative">
+        <main>
           { children }
         </main>
       </div>

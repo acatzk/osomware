@@ -35,7 +35,7 @@ export default function NavBar () {
   ]
 
   return (
-    <header className="relative">
+    <header>
       <div className="flex items-center justify-between py-6 px-4">
         <Link href="/">
           <a>
