@@ -1,32 +1,57 @@
 import Head from 'next/head'
 import Layout from '~/layouts/default'
+import ValuesCard from '~/components/ValuesCard'
+import ServicesCard from '~/components/ServicesCard'
 
 export default function Home() {
 
   const ourValues = [
     {
-      icon: '/svgs/values1.svg',
+      icon: '/svgs/values/values1.svg',
       text: 'Research and Discovery'
     },
     {
-      icon: '/svgs/values2.svg',
+      icon: '/svgs/values/values2.svg',
       text: 'Validating and Shaping Idea'
     },
     {
-      icon: '/svgs/values3.svg',
+      icon: '/svgs/values/values3.svg',
       text: 'Design and Prototyping'
     },
     {
-      icon: '/svgs/values4.svg',
+      icon: '/svgs/values/values4.svg',
       text: 'Development'
     },
     {
-      icon: '/svgs/values5.svg',
+      icon: '/svgs/values/values5.svg',
       text: 'Testing and Quality Assurance'
     },
     {
-      icon: '/svgs/values6.svg',
+      icon: '/svgs/values/values6.svg',
       text: 'Maintenance and Support'
+    },
+  ]
+
+  const services = [
+    {
+      icon: '/images/services/services1.png',
+      text: 'Software Development'
+    },
+    {
+      icon: '/images/services/services2.png',
+      text: 'Multimedia Arts and Design'
+    },
+    {
+      icon: '/images/services/services3.png',
+      text: 'Web Development'
+    },
+    {
+      icon: '/images/services/services4.png',
+      text: 'Web Design & Development'
+    },
+    {
+      icon: '/images/services/services5.png',
+      text: 'User Experience Design'
     },
   ]
 
@@ -127,7 +152,10 @@ export default function Home() {
               <img src="/svgs/projects.svg" />
             </div>
             <div className="flex flex-col space-y-10 max-w-md w-full">
-              <div className="space-y-8">
+              <div className="space-y-2 lg:space-y-8">
+                <div className="block lg:hidden">
+                  <img src="/svgs/projects.svg" />
+                </div>
                 <h1 className="text-lg md:text-2xl font-semibold text-primary-blue">Airclass: An E-Learning App For Non Native English Speakers</h1>
                 <div className="flex flex-wrap items-center space-x-2 sm:space-x-4">
                   <button className="bg-gray-100 text-primary-blue text-xs px-2.5 py-1.5 focus:outline-none hover:bg-gray-200">UX Research</button>
@@ -139,6 +167,27 @@ export default function Home() {
                 <SectionDescription>Airclass is an english learning web app for filipino kids who wants to learn english in a more efficient and friendly way. Also this app is suitable for adults who needs to review their english speakers who want to learn english as well.</SectionDescription>
                 <SectionButton>Read Case Study</SectionButton>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* OUR SERVICES */}
+        <section className="flex flex-col items-center justify-center py-9 container mx-auto w-full px-4 md:px-0">
+          <div className="flex flex-col items-center justify-center space-y-4 max-w-2xl">
+            <SectionSubtitle>Our Services</SectionSubtitle>
+            <div className="relative flex items-center text-center">
+              <div className="flex-shrink-0 absolute left-0 -mr-6 -top-4">
+                <DotCircleIcon />
+              </div>
+              <SectionTitle>We have the skills and experience to serve you</SectionTitle>
+            </div>
+          </div>
+          <div className="max-w-2xl pt-12">
+            <SectionDescription>We help clients to design and develop future-proof, significant and secure digital products that are centered around users needs and fulfill client's business goals.</SectionDescription>
+          </div>
+          <div className="py-14 w-full max-w-5xl">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12 xl:gap-16 w-full">
+              {services.map((service, i) => <ServicesCard key={i} {...service} />)}
             </div>
           </div>
         </section>
@@ -174,18 +223,5 @@ function SectionButton ({ children }) {
         </svg>
       </div>
     </button>
-  )
-}
-
-function ValuesCard ({ icon, text }) {
-  return (
-    <div className="flex-none max-w-1/6 rounded-lg shadow-lg">
-      <div className="flex flex-col items-center justify-center py-8 space-y-6 px-4">
-        <div className="flex-shrink-0">
-          <img src={icon} />
-        </div>
-        <h1 className="text-center text-sm font-medium text-primary-blue">{ text }</h1>
-      </div>
-    </div>
   )
 }
