@@ -154,9 +154,8 @@ function LogoSmall () {
 
 function Menu () {
   return (
-    <svg className="w-6  h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path fill="none" d="M0 0h24v24H0z" />
-      <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
+    <svg className="w-7 h-7 fill-current text-primary-blue" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M4 8h16M4 16h16"></path>
     </svg>
   )
 }
