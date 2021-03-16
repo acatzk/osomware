@@ -63,8 +63,8 @@ export default function Home() {
       </Head>
       <Layout>
         {/* HERO SECTION */}
-        <section className="flex items-center justify-center py-16 container mx-auto w-full px-4 md:px-0">
-          <div className="flex flex-col space-y-8">
+        <section className="flex items-center justify-center py-16 mx-auto w-full px-2 md:px-0">
+          <div className="flex flex-col space-y-8 px-2">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl lg:max-w-full">Software Development that fits your needs</h1>
             <div className="space-y-3">
               <p className="text-secondary-blue">Full scale project development - Concept,</p>
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
         
         {/* ABOUS US SECTION */}
-        <section className="flex items-center justify-center py-9 container mx-auto w-full px-4 md:px-0">
+        <section className="flex items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
           <div className="flex-shrink-0 hidden lg:block">
             <img src="/svgs/tree.svg" />
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
         </section>
 
         {/* OUR VALUES SECTION */}
-        <section className="flex flex-col items-center justify-center py-9 container mx-auto w-full px-4 md:px-0">
+        <section className="flex flex-col items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
           <div className="flex flex-col items-center justify-center space-y-4">
             <SectionSubtitle>Our Values</SectionSubtitle>
             <div className="relative flex items-center">
@@ -137,7 +137,7 @@ export default function Home() {
         </section>
 
         {/*  OUR PROJECT SECTION */}
-        <section className="flex flex-col items-center justify-center py-9 container mx-auto w-full px-4 md:px-0">
+        <section className="flex flex-col items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
           <div className="flex flex-col items-center justify-center space-y-4">
             <SectionSubtitle>Our Projects</SectionSubtitle>
             <div className="relative flex items-center">
@@ -172,7 +172,7 @@ export default function Home() {
         </section>
 
         {/* OUR SERVICES */}
-        <section className="flex flex-col items-center justify-center py-9 container mx-auto w-full px-4 md:px-0">
+        <section className="flex flex-col items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
           <div className="flex flex-col items-center justify-center space-y-4 max-w-2xl">
             <SectionSubtitle>Our Services</SectionSubtitle>
             <div className="relative flex items-center text-center">
@@ -216,6 +216,48 @@ export default function Home() {
             </div>
             <div>
               <SectionButton>Learn More</SectionButton>
+            </div>
+          </div>
+        </section>
+      
+        {/* FEEDBACK SECTION */}
+        <section className="flex flex-col items-center justify-center py-14 mx-auto w-full px-4 md:px-0">
+          <div className="flex flex-col items-center justify-center space-y-4 max-w-lg text-center">
+            <SectionSubtitle>Feedbacks</SectionSubtitle>
+            <SectionTitle>Our clients appreciate what we do</SectionTitle>
+          </div>
+          <div className="flex flex-col items-center py-14 space-y-4 max-w-3xl">
+            <div className="flex-shrink-0">
+              <img src="/svgs/stars.svg" />
+            </div>
+            <div className="flex items-center justify-center space-x-2  md:space-x-10">
+              <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
+                <svg 
+                  className="w-10 h-10 fill-current text-primary-blue"
+                  viewBox="0 0 20 20"
+                >
+                  <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+              </button>
+              <SectionDescription>
+                <span className="line-clamp-5">Adipisicing exercitation eu proident ex cillum excepteur cupidatat in commodo id veniam magna duis quis. Tempor et excepteur veniam dolor amet nulla ipsum anim consectetur est proident aliquip esse. Aute irure magna enim laboris excepteur labore ea dolore eiusmod id laboris. Ex officia dolore est consequat ullamco est </span>
+              </SectionDescription>
+              <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
+                <svg 
+                  className="w-10 h-10 fill-current text-primary-blue" 
+                  viewBox="0 0 20 20"
+                >
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col py-16 space-y-16">
+            <h1 className="text-center text-2xl lg:text-4xl xl:text-5xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl lg:max-w-full">Have a project in mind?</h1>
+            <div className="text-center">
+              <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+                Talk to US
+              </button>
             </div>
           </div>
         </section>
