@@ -15,7 +15,8 @@ module.exports = {
         'primary-indigo': '#6924FF',
         'primary-blue': '#1E2D56',
         'secondary-blue': '#7483AA',
-        'light-blue': '#00A5FF'
+        'light-blue': '#00A5FF',
+        'gray-darker': '#181818'
       }
     },
   },
