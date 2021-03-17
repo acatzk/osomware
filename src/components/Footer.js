@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 export default function Footer () {
   return (
     <footer className="bg-gray-darker">
@@ -8,9 +10,12 @@ export default function Footer () {
           </div>
           <div className="flex items-center space-x-6">
             <h1 className="text-white text-lg font-medium">Get a free consultation</h1>
-            <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+            <motion.button 
+              className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
+              whileHover={{ y: -4 }}
+            >
               Contact
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
@@ -72,19 +77,23 @@ export default function Footer () {
           </ul>
         </div>
         <div className="flex items-center space-x-4">
-          <button className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200">
+          <SocialButton>
             <FacebookLogo />
-          </button>
-          <button className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200">
+          </SocialButton>
+          <SocialButton>
             <TwitterLogo />
-          </button>
-          <button className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200">
+          </SocialButton>
+          <SocialButton>
             <InstagramLogo />
-          </button>
+          </SocialButton>
         </div>
       </div>
     </footer>
   )
+}
+
+function SocialButton ({ children }) {
+  return <button className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200">{ children }</button>
 }
 
 function FacebookLogo () {
