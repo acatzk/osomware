@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { motion } from 'framer-motion' 
 import Layout from '~/layouts/default'
 import ValuesCard from '~/components/ValuesCard'
 import ServicesCard from '~/components/ServicesCard'
@@ -72,12 +73,18 @@ export default function Home() {
               <p className="text-secondary-blue">QA and Project Management</p>
             </div>
             <div className="space-x-3 sm:space-x-4">
-              <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-9 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+              <motion.button 
+                className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-9 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
+                whileHover={{ y: -4 }}
+              >
                 Get a quote
-              </button>
-              <button className="text-secondary-blue hover:text-white hover:bg-primary-indigo px-7 xl:px-12 py-3 border hover:border-primary-indigo rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+              </motion.button>
+              <motion.button 
+                className="text-secondary-blue hover:text-white hover:bg-primary-indigo px-7 xl:px-12 py-3 border hover:border-primary-indigo rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
+                whileHover={{ y: -4 }}
+              >
                 Portfolio
-              </button>
+              </motion.button>
             </div>
           </div>
           <div className="flex-shrink-0 hidden lg:block">
@@ -252,9 +259,12 @@ export default function Home() {
           <div className="flex flex-col py-16 space-y-16">
             <h1 className="text-center text-2xl lg:text-4xl xl:text-5xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl lg:max-w-full">Have a project in mind?</h1>
             <div className="text-center">
-              <button className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+              <motion.button 
+                className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
+                whileHover={{ y: -4 }}
+              >
                 Talk to US
-              </button>
+              </motion.button>
             </div>
           </div>
         </section>
@@ -281,7 +291,10 @@ function DotCircleIcon () {
 
 function SectionButton ({ children }) {
   return (
-    <button className="flex items-center space-x-3 bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-6 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200">
+    <motion.button 
+      className="flex items-center space-x-3 bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-6 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
+      whileHover={{ y: -4 }}
+    >
       <span>{ children }</span>
       <div>
         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -289,6 +302,6 @@ function SectionButton ({ children }) {
           <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
         </svg>
       </div>
-    </button>
+    </motion.button>
   )
 }
