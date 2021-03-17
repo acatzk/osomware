@@ -147,15 +147,12 @@ export default function Home() {
               <SectionTitle className="text-center">Take a look at what we've built</SectionTitle>
             </div>
           </div>
-          <div className="flex items-center space-x-0 lg:space-x-10 py-12">
-            <div className="hidden lg:block">
+          <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 py-12">
+            <div>
               <img src="/svgs/projects.svg" />
             </div>
             <div className="flex flex-col space-y-10 max-w-md w-full">
               <div className="space-y-2 lg:space-y-8">
-                <div className="block lg:hidden">
-                  <img src="/svgs/projects.svg" />
-                </div>
                 <h1 className="text-lg md:text-2xl font-semibold text-primary-blue">Airclass: An E-Learning App For Non Native English Speakers</h1>
                 <div className="flex flex-wrap items-center space-x-2 sm:space-x-4">
                   <button className="bg-gray-100 text-primary-blue text-xs px-2.5 py-1.5 focus:outline-none hover:bg-gray-200">UX Research</button>

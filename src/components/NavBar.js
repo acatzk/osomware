@@ -71,7 +71,7 @@ export default function NavBar () {
       
       <Transition show={isOpen}>
         <nav className="absolute top-0 inset-x-0 p-2 z-50">
-          <div className="shadow-lg rounded-lg">
+          <div className="shadow-lg rounded-lg border-t border-gray-100">
             <div className="bg-white shadow-sm rounded-lg pt-5 pb-8 px-5 space-y-7">
               <div className="flex justify-between items-center">
                 <Link 
