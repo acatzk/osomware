@@ -2,7 +2,7 @@ import React, { Children } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
 
-let parentActive = false;
+let parentActive = false
 
 const processChildren = (
   active,

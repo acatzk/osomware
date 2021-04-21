@@ -1,61 +1,12 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion' 
 import Layout from '~/layouts/default'
-import ValuesCard from '~/components/ValuesCard'
-import ServicesCard from '~/components/ServicesCard'
+import { services, values } from '~/constants'
+import ValueList from '~/components/ValueList'
+import ServiceList from '~/components/ServiceList'
+import { ChevronRight, ChevronLeft, DotCircleIcon } from '~/utils/Icons'
 
-export default function Home() {
-
-  const ourValues = [
-    {
-      icon: '/svgs/values/values1.svg',
-      text: 'Research and Discovery'
-    },
-    {
-      icon: '/svgs/values/values2.svg',
-      text: 'Validating and Shaping Idea'
-    },
-    {
-      icon: '/svgs/values/values3.svg',
-      text: 'Design and Prototyping'
-    },
-    {
-      icon: '/svgs/values/values4.svg',
-      text: 'Development'
-    },
-    {
-      icon: '/svgs/values/values5.svg',
-      text: 'Testing and Quality Assurance'
-    },
-    {
-      icon: '/svgs/values/values6.svg',
-      text: 'Maintenance and Support'
-    },
-  ]
-
-  const services = [
-    {
-      icon: '/images/services/services1.png',
-      text: 'Software Development'
-    },
-    {
-      icon: '/images/services/services2.png',
-      text: 'Multimedia Arts and Design'
-    },
-    {
-      icon: '/images/services/services3.png',
-      text: 'Web Development'
-    },
-    {
-      icon: '/images/services/services4.png',
-      text: 'Web Design & Development'
-    },
-    {
-      icon: '/images/services/services5.png',
-      text: 'User Experience Design'
-    },
-  ]
-
+export default function IndexPage() {
   return (
     <>
       <Head>
@@ -136,10 +87,8 @@ export default function Home() {
           <div className="max-w-4xl pt-12">
             <SectionDescription>All our processes are customer-oriented, designed to reduce the cost of business operations, address IT resourcing challenges, and offer you a competitive edge. We start with a deep analysis of your requirements and continue our relationship with post-launch support and updates.</SectionDescription>
           </div>
-          <div className="px-0 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-14">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4 lg:grap-5 xl:gap-8 w-full">
-              {ourValues.map((values, i) => <ValuesCard key={i} {...values} />)}
-            </div>
+          <div className="px-0 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-14">  
+            <ValueList values={values} />
           </div>
         </section>
 
@@ -190,9 +139,7 @@ export default function Home() {
             <SectionDescription>We help clients to design and develop future-proof, significant and secure digital products that are centered around users needs and fulfill client's business goals.</SectionDescription>
           </div>
           <div className="py-14 w-full max-w-5xl">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12 xl:gap-16 w-full">
-              {services.map((service, i) => <ServicesCard key={i} {...service} />)}
-            </div>
+            <ServiceList services={services} />
           </div>
         </section>
       
@@ -236,23 +183,13 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center space-x-2  md:space-x-10">
               <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
-                <svg 
-                  className="w-10 h-10 fill-current text-primary-blue"
-                  viewBox="0 0 20 20"
-                >
-                  <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <ChevronLeft className="w-10 h-10 fill-current text-primary-blue" />
               </button>
               <SectionDescription>
                 <span className="line-clamp-5">Adipisicing exercitation eu proident ex cillum excepteur cupidatat in commodo id veniam magna duis quis. Tempor et excepteur veniam dolor amet nulla ipsum anim consectetur est proident aliquip esse. Aute irure magna enim laboris excepteur labore ea dolore eiusmod id laboris. Ex officia dolore est consequat ullamco est </span>
               </SectionDescription>
               <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
-                <svg 
-                  className="w-10 h-10 fill-current text-primary-blue" 
-                  viewBox="0 0 20 20"
-                >
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <ChevronRight className="w-10 h-10 fill-current text-primary-blue" />
               </button>
             </div>
           </div>
@@ -285,10 +222,6 @@ function SectionDescription ({ children }) {
   return <p className="text-secondary-blue leading-loose">{ children }</p>
 }
 
-function DotCircleIcon () {
-  return <img src="/svgs/circles.svg" className="w-full h-full" />
-}
-
 function SectionButton ({ children }) {
   return (
     <motion.button 
@@ -296,12 +229,7 @@ function SectionButton ({ children }) {
       whileHover={{ y: -4 }}
     >
       <span>{ children }</span>
-      <div>
-        <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-          <path fill="none" d="M0 0h24v24H0z"/>
-          <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
-        </svg>
-      </div>
+      <ChevronRight className="w-6 h-6 fill-current" />
     </motion.button>
   )
 }
