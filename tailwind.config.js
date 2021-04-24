@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [
     './src/pages/**/*.{js,ts,jsx,tsx}', 
@@ -12,6 +14,9 @@ module.exports = {
         'secondary-blue': '#7483AA',
         'light-blue': '#00A5FF',
         'gray-darker': '#181818'
+      },
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       }
     },
   },
