@@ -1,4 +1,6 @@
-export const values = [
+import { IList, ILink } from './type'
+
+export const values:IList[] = [
   {
     icon: '/svgs/values/values1.svg',
     text: 'Research and Discovery'
@@ -22,7 +24,7 @@ export const values = [
   {
     icon: '/svgs/values/values6.svg',
     text: 'Maintenance and Support'
-  },
+  }
 ]
 
 export const services = [
@@ -45,10 +47,10 @@ export const services = [
   {
     icon: '/images/services/services5.png',
     text: 'User Experience Design'
-  },
+  }
 ]
 
-export const links = [
+export const links:ILink[] = [
   {
     text: 'Home',
     to: '/'

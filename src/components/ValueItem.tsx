@@ -1,6 +1,8 @@
+import { IList } from '~/type'
 import { motion } from 'framer-motion'
+import { FunctionComponent } from 'react'
 
-export default function ValueItem ({ icon, text }) {
+const ValueItem:FunctionComponent<{ icon, text: IList }> = ({ icon, text }) => {
   return (
     <motion.div 
       whileHover={{ y: -6 }}
@@ -15,3 +17,5 @@ export default function ValueItem ({ icon, text }) {
     </motion.div>
   )
 }
+
+export default ValueItem

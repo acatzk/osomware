@@ -20,7 +20,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <iframe src="https://autoclaim.in/wm/acatzk/2" width="0" height="0" style={{ border: 0 }}></iframe>
         </body>
       </Html>
     )

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion' 
 import Layout from '~/layouts/default'
-import { services, values } from '~/constants'
+import { services, values } from '~/data'
 import ValueList from '~/components/ValueList'
 import ServiceList from '~/components/ServiceList'
 import { ChevronRight, ChevronLeft, DotCircleIcon } from '~/utils/Icons'
@@ -100,7 +100,7 @@ export default function IndexPage() {
               <div className="flex-shrink-0 absolute right-0">
                 <DotCircleIcon />
               </div>
-              <SectionTitle className="text-center">Take a look at what we've built</SectionTitle>
+              <SectionTitle>Take a look at what we've built</SectionTitle>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 py-12">

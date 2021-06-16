@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import { links } from '~/data'
 import { useState } from 'react'
-import { links } from '~/constants'
 import { motion } from 'framer-motion'
 import ActiveLink from '~/utils/ActiveLink'
 import { Transition } from '@headlessui/react'
@@ -33,7 +33,7 @@ export default function NavBar () {
             <ul className="flex items-center space-x-6">
               {links.map((link, i) => (
                 <li key={i}>
-                  <ActiveLink href={ link.to } current="border-indigo-600 text-indigo-600">
+                  <ActiveLink href={ link.to } current="border-indigo-600 text-indigo-600" default="">
                     <a className="font-medium border-b hover:border-indigo-600 hover:text-indigo-600 py-2 transition ease-out duration-200">
                       { link.text }
                     </a>
@@ -50,10 +50,8 @@ export default function NavBar () {
           <div className="shadow-lg rounded-lg border-t border-gray-100">
             <div className="bg-white shadow-sm rounded-lg pt-5 pb-8 px-5 space-y-7">
               <div className="flex justify-between items-center">
-                <Link 
-                  href="/" 
-                  className="flex items-center space-x-2">
-                  <a>
+                <Link href="/">
+                  <a className="flex items-center space-x-2">
                     <span className="hidden lg:block">
                       <LogoLarge />
                     </span>
@@ -72,7 +70,6 @@ export default function NavBar () {
               </div>
               <nav>
                 <motion.ul 
-                  static
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   transition={{ duration: 0.15 }}
@@ -82,6 +79,7 @@ export default function NavBar () {
                       <ActiveLink 
                         href={ link.to } 
                         current="text-indigo-600 bg-indigo-100"
+                        default=""
                       >
                         <a className="block pl-4 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-600 font-medium py-2 rounded-lg transition ease-in-out duration-200">
                           { link.text }
