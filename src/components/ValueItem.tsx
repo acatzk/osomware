@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { IList } from '~/type'
 import { motion } from 'framer-motion'
 import { FunctionComponent } from 'react'
@@ -10,7 +11,11 @@ const ValueItem:FunctionComponent<{ icon, text: IList }> = ({ icon, text }) => {
     >
       <div className="flex flex-col items-center justify-center py-8 space-y-6 px-4">
         <div className="flex-shrink-0">
-          <img src={icon} />
+          <Image 
+            src={icon} 
+            width={70}
+            height={70}
+          />
         </div>
         <h1 className="text-center text-sm font-medium text-primary-blue">{ text }</h1>
       </div>

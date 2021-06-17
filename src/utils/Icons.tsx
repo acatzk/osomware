@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const ChevronRight = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 24 24">
@@ -70,7 +72,14 @@ export const LogoLarge = () => {
 }
 
 export const LogoSmall = () => {
-  return <img src="/svgs/logo.svg" />
+  return (
+    <Image 
+      src="/svgs/logo.svg" 
+      width="75"
+      height="50"
+      layout="fixed"
+    />
+  )
 }
 
 export const FacebookLogo = ({ className }) => {

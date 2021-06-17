@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { motion } from 'framer-motion' 
 import Layout from '~/layouts/default'
 import { services, values } from '~/data'
@@ -17,7 +18,7 @@ export default function IndexPage() {
         {/* HERO SECTION */}
         <section className="flex items-center justify-center py-16 mx-auto w-full px-2 md:px-0">
           <div className="flex flex-col space-y-8 px-2">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl lg:max-w-full">Software Development that fits your needs</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl xl:max-w-full">Software Development that fits your needs</h1>
             <div className="space-y-3">
               <p className="text-secondary-blue">Full scale project development - Concept,</p>
               <p className="text-secondary-blue">Architecture, Planning, UX/UI Design, Development</p>
@@ -38,15 +39,25 @@ export default function IndexPage() {
               </motion.button>
             </div>
           </div>
-          <div className="flex-shrink-0 hidden lg:block">
-            <img src="/svgs/hero.svg" className="max-w-md md:max-w-2xl" />
+          <div className="flex-shrink-0 hidden xl:block">
+            <Image 
+              src="/svgs/hero.svg" 
+              width={670}
+              height={540}
+              layout="intrinsic"
+            />
           </div>
         </section>
         
         {/* ABOUS US SECTION */}
         <section className="flex items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
           <div className="flex-shrink-0 hidden lg:block">
-            <img src="/svgs/tree.svg" />
+            <Image 
+              src="/svgs/tree.svg" 
+              width={670}
+              height={540}
+              layout="intrinsic"
+            />
           </div>
           <div className="flex flex-col space-y-8 w-full max-w-xl lg:max-w-md">
             <div className="space-y-4">
@@ -59,7 +70,13 @@ export default function IndexPage() {
                   <SectionTitle>What makes us different?</SectionTitle>
                 </div>
                 <div className="block lg:hidden">
-                  <img src="/svgs/tree.svg" className="w-40" />
+                  <Image 
+                    src="/svgs/tree.svg" 
+                    className="w-40" 
+                    width={100}
+                    height={100}
+                    layout="intrinsic"
+                  />
                 </div>
               </div>
             </div>
@@ -105,7 +122,12 @@ export default function IndexPage() {
           </div>
           <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 py-12">
             <div>
-              <img src="/svgs/projects.svg" />
+              <Image 
+                src="/svgs/projects.svg" 
+                width={650}
+                height={600}
+                layout="intrinsic"
+              />
             </div>
             <div className="flex flex-col space-y-10 max-w-md w-full">
               <div className="space-y-2 lg:space-y-8">
@@ -146,7 +168,13 @@ export default function IndexPage() {
         {/* OUR VISION SECTION */}
         <section className="flex flex-row-reverse items-center justify-center py-9 mx-auto w-full px-4">
           <div className="flex-shrink-0 hidden lg:block">
-            <img src="/images/team.png" className="w-full max-w-lg" />
+            <Image 
+              src="/images/team.png" 
+              width={500}
+              height={350}
+              layout="intrinsic"
+              className="w-full max-w-lg" 
+            />
           </div>
           <div className="flex flex-col space-y-16 w-full max-w-xl">
             <div className="space-y-4">
@@ -158,7 +186,12 @@ export default function IndexPage() {
                 <SectionTitle>Meet Our Awesome Team</SectionTitle>
               </div>
               <div className="block lg:hidden pt-8">
-                <img src="/images/team.png" className="w-auto" />
+                <Image 
+                  src="/images/team.png" 
+                  width={600}
+                  height={400}
+                  layout="intrinsic"
+                />
               </div>
             </div>
             <div className="space-y-8 w-full max-w-none md:max-w-lg">
@@ -179,7 +212,12 @@ export default function IndexPage() {
           </div>
           <div className="flex flex-col items-center py-14 space-y-4 max-w-3xl">
             <div className="flex-shrink-0">
-              <img src="/svgs/stars.svg" />
+              <Image 
+                src="/svgs/stars.svg" 
+                width={200}
+                height={50}
+                layout="intrinsic"
+              />
             </div>
             <div className="flex items-center justify-center space-x-2  md:space-x-10">
               <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
