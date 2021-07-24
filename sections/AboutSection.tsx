@@ -9,12 +9,12 @@ import SectionDescription from './SectionDescription'
 const AboutSection: React.FC = () => {
   return (
     <section className="flex items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
-      <div className="flex-shrink-0 hidden lg:block">
+      <div className="relative w-[670px] h-[540px] flex-shrink-0 hidden lg:block">
         <Image
           src="/svgs/tree.svg"
-          width={670}
-          height={540}
-          layout="intrinsic"
+          blurDataURL="/svgs/tree.svg"
+          placeholder="blur"
+          layout="fill"
           alt="tree-large-image"
         />
       </div>
@@ -28,13 +28,12 @@ const AboutSection: React.FC = () => {
               </div>
               <SectionTitle>What makes us different?</SectionTitle>
             </div>
-            <div className="block lg:hidden">
+            <div className="relative w-[100px] h-[100px] block lg:hidden">
               <Image
                 src="/svgs/tree.svg"
-                className="w-40"
-                width={100}
-                height={100}
-                layout="intrinsic"
+                blurDataURL="/svgs/tree.svg"
+                placeholder="blur"
+                layout="fill"
                 alt="tree-small-image"
               />
             </div>

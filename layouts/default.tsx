@@ -1,8 +1,12 @@
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Sticky from 'react-stickynode'
 import NavBar from 'components/NavBar'
-import Footer from 'components/Footer'
 import React, { useState } from 'react'
+
+const Footer = dynamic(() => import('components/Footer'), {
+  ssr: false,
+})
 
 const Layout: React.FC = ({ children }) => {
   const [isSticky, setIsSticky] = useState(false)
@@ -20,9 +24,11 @@ const Layout: React.FC = ({ children }) => {
       <div className="block lg:hidden">
         <Image
           src="/svgs/buble.svg"
-          quality={75}
           layout="fill"
-          className="object-cover inset-0 w-full h-full opacity-50"
+          blurDataURL="/svgs/buble.svg"
+          placeholder="blur"
+          className="object-cover inset-0 w-full h-full opacity-60"
+          quality={75}
           alt="background-image"
         />
       </div>

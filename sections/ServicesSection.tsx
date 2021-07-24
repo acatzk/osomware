@@ -24,7 +24,7 @@ const ServicesSection: React.FC = () => {
         <SectionDescription>
           We help clients to design and develop future-proof, significant and
           secure digital products that are centered around users needs and
-          fulfill client's business goals.
+          fulfill client`s business goals.
         </SectionDescription>
       </div>
       <div className="py-14 w-full max-w-5xl">

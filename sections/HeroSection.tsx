@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="flex items-center justify-center py-16 mx-auto w-full px-2 md:px-4">
       <div className="flex flex-col space-y-8 px-2">
-        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl xl:max-w-full">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug tracking-wide text-primary-blue max-w-xl xl:max-w-2xl">
           Software Development that fits your needs
         </h1>
         <div className="space-y-3">
@@ -33,12 +33,13 @@ const HeroSection: React.FC = () => {
           </motion.button>
         </div>
       </div>
-      <div className="flex-shrink-0 hidden xl:block">
+      <div className="relative w-[680px] h-[550px] flex-shrink-0 hidden xl:block">
         <Image
           src="/svgs/hero.svg"
-          width={670}
-          height={540}
-          layout="intrinsic"
+          className="w-full h-full inset-0"
+          blurDataURL="/svgs/hero.svg"
+          layout="fill"
+          placeholder="blur"
           alt="hero-icon"
         />
       </div>

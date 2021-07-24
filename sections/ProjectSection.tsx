@@ -15,7 +15,7 @@ const ProjectSection: React.FC = () => {
           <div className="flex-shrink-0 absolute right-0">
             <DotCircleIcon />
           </div>
-          <SectionTitle>Take a look at what we've built</SectionTitle>
+          <SectionTitle>Take a look at what we`ve built</SectionTitle>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 py-12">
@@ -24,6 +24,8 @@ const ProjectSection: React.FC = () => {
             src="/svgs/projects.svg"
             width={650}
             height={600}
+            blurDataURL="/svgs/projects.svg"
+            placeholder="blur"
             layout="intrinsic"
             alt="project-icon"
           />

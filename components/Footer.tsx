@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="flex items-center justify-between py-14  mx-auto max-w-7xl px-6">
           <div className="flex-shrink-0">
             <Image
-              width={160}
+              width={190}
               height={90}
               src="/svgs/main-logo.svg"
               alt="main-logo"
