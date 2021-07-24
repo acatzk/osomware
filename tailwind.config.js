@@ -1,12 +1,19 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  mode: 'jit',
   purge: [
-    './src/pages/**/*.{js,ts,jsx,tsx}', 
-    './src/components/**/*.{js,ts,jsx,tsx}'
+    './utils/**/*.{js,ts,jsx,tsx}', 
+    './pages/**/*.{js,ts,jsx,tsx}', 
+    './layouts/**/*.{js,ts,jsx,tsx}', 
+    './sections/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       colors: {
         'primary-indigo': '#6924FF',
