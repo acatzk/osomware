@@ -32,7 +32,7 @@ const Layout: React.FC = ({ children }) => {
           alt="background-image"
         />
       </div>
-      <div className="relative">
+      <div className="relative antialiased">
         <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
           <NavBar
             className={`${
