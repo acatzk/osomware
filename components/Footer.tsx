@@ -80,12 +80,20 @@ const Footer: React.FC = () => {
         <div>
           <ul className="flex items-center space-x-10">
             <li>
-              <a className="text-sm text-white cursor-pointer hover:underline">
+              <a
+                href="#"
+                className="text-sm text-white cursor-pointer hover:underline"
+                aria-label="term-and-condition"
+              >
                 Terms & Condition
               </a>
             </li>
             <li>
-              <a className="text-sm text-white cursor-pointer hover:underline">
+              <a
+                href="#"
+                className="text-sm text-white cursor-pointer hover:underline"
+                aria-label="privacy-policy"
+              >
                 Privacy Policy
               </a>
             </li>
@@ -109,7 +117,10 @@ const Footer: React.FC = () => {
 
 function SocialButton({ children }) {
   return (
-    <button className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200">
+    <button
+      className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200"
+      aria-label="social-buttons"
+    >
       {children}
     </button>
   )

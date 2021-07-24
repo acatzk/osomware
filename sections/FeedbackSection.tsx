@@ -19,12 +19,17 @@ const FeedbackSection: React.FC = () => {
             src="/svgs/stars.svg"
             width={200}
             height={50}
+            blurDataURL="/svgs/stars.svg"
+            placeholder="blur"
             layout="intrinsic"
             alt="star-icon"
           />
         </div>
         <div className="flex items-center justify-center space-x-2  md:space-x-10">
-          <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
+          <button
+            className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none"
+            aria-label="arrow-left"
+          >
             <ChevronLeft className="w-10 h-10 fill-current text-primary-blue" />
           </button>
           <SectionDescription>
@@ -36,7 +41,10 @@ const FeedbackSection: React.FC = () => {
               id laboris. Ex officia dolore est consequat ullamco est{' '}
             </span>
           </SectionDescription>
-          <button className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none">
+          <button
+            className="hidden md:block rounded-full bg-white shadow-lg hover:shadow-xl focus:shadow-lg focus:outline-none"
+            aria-label="arrow-right"
+          >
             <ChevronRight className="w-10 h-10 fill-current text-primary-blue" />
           </button>
         </div>
