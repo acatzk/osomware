@@ -10,8 +10,14 @@ const ValueItem: React.FC<IList> = ({ icon, text }) => {
       className="flex-none max-w-1/6 rounded-lg cursor-default hover:shadow-xl transition ease-in-out duration-200"
     >
       <div className="flex flex-col items-center justify-center py-8 space-y-6 px-4">
-        <div className="flex-shrink-0">
-          <Image src={icon} width={70} height={70} alt="value-icon" />
+        <div className="relative w-[70px] h-[70px] flex-shrink-0">
+          <Image
+            layout="fill"
+            src={icon}
+            alt="value-icon"
+            blurDataURL={icon}
+            placeholder="blur"
+          />
         </div>
         <h1 className="text-center text-sm font-medium text-primary-blue">
           {text}

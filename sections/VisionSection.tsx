@@ -16,6 +16,8 @@ const VisionSection: React.FC = () => {
           height={350}
           layout="intrinsic"
           className="w-full max-w-lg"
+          blurDataURL="/images/team.png"
+          placeholder="blur"
           alt="team-image"
         />
       </div>
@@ -34,6 +36,8 @@ const VisionSection: React.FC = () => {
               width={600}
               height={400}
               layout="intrinsic"
+              blurDataURL="/images/team.png"
+              placeholder="blur"
               alt="team-image-small"
             />
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Layout from 'layouts/default'
 
@@ -31,7 +32,7 @@ const FeedbackSection = dynamic(() => import('sections/FeedbackSection'), {
   ssr: false,
 })
 
-export default function IndexPage() {
+const Index: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
@@ -50,3 +51,5 @@ export default function IndexPage() {
     </React.Fragment>
   )
 }
+
+export default Index
