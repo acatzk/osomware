@@ -7,3 +7,8 @@ export interface ILink {
   text: string
   to: string
 }
+
+export interface IService {
+  icon: string
+  text: string
+}

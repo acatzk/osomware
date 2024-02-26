@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const HeroSection: React.FC = () => {
+export default function HeroSection(): JSX.Element {
   return (
     <section className="flex items-center justify-center py-16 mx-auto w-full px-2 md:px-4">
       <div className="flex flex-col space-y-8 px-2">
@@ -10,12 +10,8 @@ const HeroSection: React.FC = () => {
           Software Development that fits your needs
         </h1>
         <div className="space-y-3">
-          <p className="text-secondary-blue">
-            Full scale project development - Concept,
-          </p>
-          <p className="text-secondary-blue">
-            Architecture, Planning, UX/UI Design, Development
-          </p>
+          <p className="text-secondary-blue">Full scale project development - Concept,</p>
+          <p className="text-secondary-blue">Architecture, Planning, UX/UI Design, Development</p>
           <p className="text-secondary-blue">QA and Project Management</p>
         </div>
         <div className="space-x-3 sm:space-x-4">
@@ -46,5 +42,3 @@ const HeroSection: React.FC = () => {
     </section>
   )
 }
-
-export default HeroSection

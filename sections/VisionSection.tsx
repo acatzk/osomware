@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
+
+import { DotCircleIcon } from '~/utils/Icons'
+
 import SectionTitle from './SectionTitle'
 import SectionButton from './SectionButton'
-import { DotCircleIcon } from 'utils/Icons'
 import SectionSubtitle from './SectionSubtitle'
 import SectionDescription from './SectionDescription'
 
-const VisionSection: React.FC = () => {
+export default function VisionSection(): JSX.Element {
   return (
     <section className="flex flex-row-reverse items-center justify-center py-9 mx-auto w-full px-4">
       <div className="flex-shrink-0 hidden lg:block">
@@ -44,10 +46,9 @@ const VisionSection: React.FC = () => {
         </div>
         <div className="space-y-8 w-full max-w-none md:max-w-lg">
           <SectionDescription>
-            Need an entire development team, maybe an additional development
-            unit or just a small supplemental development team for special
-            projects that area outside of your core business? If so, consider a
-            dedicated team from Osomware
+            Need an entire development team, maybe an additional development unit or just a small
+            supplemental development team for special projects that area outside of your core
+            business? If so, consider a dedicated team from Osomware
           </SectionDescription>
           <SectionDescription>
             You can ramp up in a hurry by leveraging the methodologies.
@@ -60,5 +61,3 @@ const VisionSection: React.FC = () => {
     </section>
   )
 }
-
-export default VisionSection

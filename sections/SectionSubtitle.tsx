@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const SectionSubtitle: React.FC = ({ children }) => {
-  return <div className="font-bold text-light-blue">{children}</div>
+type SectionSubtitleProps = {
+  children: ReactNode
 }
 
-export default SectionSubtitle
+export default function SectionSubtitle({ children }: SectionSubtitleProps): JSX.Element {
+  return <div className="font-bold text-light-blue">{children}</div>
+}

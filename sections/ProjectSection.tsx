@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
+
+import { DotCircleIcon } from '~/utils/Icons'
+
 import SectionTitle from './SectionTitle'
-import { DotCircleIcon } from 'utils/Icons'
 import SectionButton from './SectionButton'
 import SectionSubtitle from './SectionSubtitle'
 import SectionDescription from './SectionDescription'
 
-const ProjectSection: React.FC = () => {
+export default function ProjectSection(): JSX.Element {
   return (
     <section className="flex flex-col items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -49,10 +51,9 @@ const ProjectSection: React.FC = () => {
           </div>
           <div className="space-y-8">
             <SectionDescription>
-              Airclass is an english learning web app for filipino kids who
-              wants to learn english in a more efficient and friendly way. Also
-              this app is suitable for adults who needs to review their english
-              speakers who want to learn english as well.
+              Airclass is an english learning web app for filipino kids who wants to learn english
+              in a more efficient and friendly way. Also this app is suitable for adults who needs
+              to review their english speakers who want to learn english as well.
             </SectionDescription>
             <SectionButton>Read Case Study</SectionButton>
           </div>
@@ -61,5 +62,3 @@ const ProjectSection: React.FC = () => {
     </section>
   )
 }
-
-export default ProjectSection

@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+
+import { ChevronLeft, ChevronRight } from '~/utils/Icons'
+
 import SectionTitle from './SectionTitle'
 import SectionSubtitle from './SectionSubtitle'
 import SectionDescription from './SectionDescription'
-import { ChevronLeft, ChevronRight } from 'utils/Icons'
 
-const FeedbackSection: React.FC = () => {
+export default function FeedbackSection(): JSX.Element {
   return (
     <section className="flex flex-col items-center justify-center py-14 mx-auto w-full px-4 md:px-0">
       <div className="flex flex-col items-center justify-center space-y-4 max-w-lg text-center">
@@ -34,11 +36,10 @@ const FeedbackSection: React.FC = () => {
           </button>
           <SectionDescription>
             <span className="line-clamp-5">
-              Adipisicing exercitation eu proident ex cillum excepteur cupidatat
-              in commodo id veniam magna duis quis. Tempor et excepteur veniam
-              dolor amet nulla ipsum anim consectetur est proident aliquip esse.
-              Aute irure magna enim laboris excepteur labore ea dolore eiusmod
-              id laboris. Ex officia dolore est consequat ullamco est{' '}
+              Adipisicing exercitation eu proident ex cillum excepteur cupidatat in commodo id
+              veniam magna duis quis. Tempor et excepteur veniam dolor amet nulla ipsum anim
+              consectetur est proident aliquip esse. Aute irure magna enim laboris excepteur labore
+              ea dolore eiusmod id laboris. Ex officia dolore est consequat ullamco est{' '}
             </span>
           </SectionDescription>
           <button
@@ -65,5 +66,3 @@ const FeedbackSection: React.FC = () => {
     </section>
   )
 }
-
-export default FeedbackSection

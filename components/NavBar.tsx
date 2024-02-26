@@ -1,23 +1,23 @@
 import Link from 'next/link'
-import { useState } from 'react'
-import { links } from 'mock/data'
 import { motion } from 'framer-motion'
-import ActiveLink from 'utils/ActiveLink'
+import React, { useState } from 'react'
 import { Transition } from '@headlessui/react'
-import { MenuIcon, CloseIcon, LogoLarge, LogoSmall } from 'utils/Icons'
 
-interface NavBarProps {
+import { links } from '~/mock/data'
+import { MenuIcon, CloseIcon, LogoLarge, LogoSmall } from '~/utils/Icons'
+
+type NavBarProps = {
   className: string
 }
 
-const NavBar: React.FC<NavBarProps> = ({ className }) => {
+export const NavBar = ({ className }: NavBarProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <header className={`${className} transition-all ease-in-out duration-300`}>
       <div className="container flex items-center justify-between py-4 md:py-8 px-4 md:px-4">
         <Link href="/">
-          <a aria-label="logos">
+          <a>
             <span className="hidden lg:block">
               <LogoLarge />
             </span>
@@ -37,13 +37,9 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
             <ul className="flex items-center space-x-6">
               {links.map((link, i) => (
                 <li key={i}>
-                  <ActiveLink
-                    href={link.to}
-                    current="border-indigo-600 text-indigo-600"
-                    default=""
-                  >
-                    <a
-                      className={`
+                  <a
+                    href={`#${link.to}`}
+                    className={`
                         ${
                           link.text === 'Home'
                             ? 'border-b border-indigo-600 text-indigo-600'
@@ -51,10 +47,9 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
                         }
                         font-medium py-2 transition ease-out duration-200
                       `}
-                    >
-                      {link.text}
-                    </a>
-                  </ActiveLink>
+                  >
+                    {link.text}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -95,15 +90,12 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
                 >
                   {links.map((link, i) => (
                     <li key={i}>
-                      <ActiveLink
-                        href={link.to}
-                        current="text-indigo-600 bg-indigo-100"
-                        default=""
+                      <a
+                        href={`#${link.to}`}
+                        className="block pl-4 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-600 font-medium py-2 rounded-lg transition ease-in-out duration-200"
                       >
-                        <a className="block pl-4 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-600 font-medium py-2 rounded-lg transition ease-in-out duration-200">
-                          {link.text}
-                        </a>
-                      </ActiveLink>
+                        {link.text}
+                      </a>
                     </li>
                   ))}
                 </motion.ul>
@@ -115,5 +107,3 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
     </header>
   )
 }
-
-export default NavBar

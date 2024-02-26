@@ -1,0 +1,28 @@
+name: Prebuild check and build
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build-frontend:
+    name: Build frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.16.0
+
+      - name: Install modules
+        run: npm run install --frozen-lockfile
+
+      - name: Run ESLint and Prettier
+        run: npm run check-format && npm run check-lint
+
+      - name: Build NextJS project
+        run: npm run build

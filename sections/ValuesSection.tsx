@@ -1,12 +1,14 @@
 import React from 'react'
-import { values } from 'mock/data'
+
+import { values } from '~/mock/data'
+import { DotCircleIcon } from '~/utils/Icons'
+import { ValueList } from '~/components/ValueList'
+
 import SectionTitle from './SectionTitle'
-import { DotCircleIcon } from 'utils/Icons'
-import ValueList from 'components/ValueList'
 import SectionSubtitle from './SectionSubtitle'
 import SectionDescription from './SectionDescription'
 
-const ValuesSection: React.FC = () => {
+export default function ValuesSection(): JSX.Element {
   return (
     <section className="flex flex-col items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -20,11 +22,10 @@ const ValuesSection: React.FC = () => {
       </div>
       <div className="max-w-4xl pt-12">
         <SectionDescription>
-          All our processes are customer-oriented, designed to reduce the cost
-          of business operations, address IT resourcing challenges, and offer
-          you a competitive edge. We start with a deep analysis of your
-          requirements and continue our relationship with post-launch support
-          and updates.
+          All our processes are customer-oriented, designed to reduce the cost of business
+          operations, address IT resourcing challenges, and offer you a competitive edge. We start
+          with a deep analysis of your requirements and continue our relationship with post-launch
+          support and updates.
         </SectionDescription>
       </div>
       <div className="px-0 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-14">
@@ -33,5 +34,3 @@ const ValuesSection: React.FC = () => {
     </section>
   )
 }
-
-export default ValuesSection

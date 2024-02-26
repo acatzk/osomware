@@ -1,17 +1,22 @@
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import Sticky from 'react-stickynode'
-import NavBar from 'components/NavBar'
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 
-const Footer = dynamic(() => import('components/Footer'), {
-  ssr: false,
+import { NavBar } from '~/components/NavBar'
+
+const Footer = dynamic(() => import('~/components/Footer'), {
+  ssr: false
 })
 
-const Layout: React.FC = ({ children }) => {
+type LayoutProps = {
+  children: ReactNode
+}
+
+export default function Layout({ children }: LayoutProps): JSX.Element {
   const [isSticky, setIsSticky] = useState(false)
 
-  const handleStateChange = (status) => {
+  const handleStateChange = (status: { status: Sticky.StatusCode }) => {
     if (status.status === Sticky.STATUS_FIXED) {
       setIsSticky(true)
     } else if (status.status === Sticky.STATUS_ORIGINAL) {
@@ -20,7 +25,7 @@ const Layout: React.FC = ({ children }) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <div className="block lg:hidden">
         <Image
           src="/svgs/buble.svg"
@@ -45,8 +50,6 @@ const Layout: React.FC = ({ children }) => {
         <main className="container">{children}</main>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-
-export default Layout

@@ -1,8 +1,8 @@
-import 'styles/tailwind.css'
+import React from 'react'
 import type { AppProps } from 'next/app'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+import '~/styles/tailwind.css'
+
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return <Component {...pageProps} />
 }
-
-export default MyApp

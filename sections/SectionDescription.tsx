@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const SectionDescription: React.FC = ({ children }) => {
-  return <p className="text-secondary-blue leading-loose">{children}</p>
+type SectionDescriptionProps = {
+  children: ReactNode
 }
 
-export default SectionDescription
+export default function SectionDescription({ children }: SectionDescriptionProps): JSX.Element {
+  return <p className="text-secondary-blue leading-loose">{children}</p>
+}
