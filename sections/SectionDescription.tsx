@@ -1,5 +1,4 @@
-import React from 'react'
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 type SectionDescriptionProps = {
   children: ReactNode

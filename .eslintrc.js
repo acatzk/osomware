@@ -3,8 +3,8 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended'],
-  overrides: [],
+  extends: ['plugin:react/recommended', 'plugin:@next/next/recommended'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -12,7 +12,12 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    '@next/next/no-document-import-in-page': 'off'
+    'no-console': 'error',
+    'eol-last': ['error', 'always'],
+    'no-duplicate-imports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    'react/prop-types': 'off'
   },
   settings: {
     react: {

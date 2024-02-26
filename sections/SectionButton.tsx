@@ -1,6 +1,5 @@
-import React from 'react'
-import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import React, { ReactNode } from 'react'
 
 import { ChevronRight } from '~/utils/Icons'
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import React, { useState } from 'react'
 import { Transition } from '@headlessui/react'
 
 import { links } from '~/mock/data'
