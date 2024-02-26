@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
+
+import { DotCircleIcon } from '~/utils/Icons'
+
 import SectionTitle from './SectionTitle'
 import SectionButton from './SectionButton'
-import { DotCircleIcon } from 'utils/Icons'
 import SectionSubtitle from './SectionSubtitle'
 import SectionDescription from './SectionDescription'
 
-const AboutSection: React.FC = () => {
+export default function AboutSection(): JSX.Element {
   return (
     <section className="flex items-center justify-center py-9 mx-auto w-full px-4 md:px-0">
       <div className="relative w-[670px] h-[540px] flex-shrink-0 hidden lg:block">
@@ -41,14 +43,12 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="space-y-6">
           <SectionDescription>
-            Osomware offers out customers a wealth of technical and business
-            expertise. We create diverse, complex, web and mobile solutions for
-            any business need.
+            Osomware offers out customers a wealth of technical and business expertise. We create
+            diverse, complex, web and mobile solutions for any business need.
           </SectionDescription>
           <SectionDescription>
-            Out knowledge and experience translate to added value and peace of
-            mind for our customers. With Syberry you get quality software and
-            perfect service every time.
+            Out knowledge and experience translate to added value and peace of mind for our
+            customers. With Syberry you get quality software and perfect service every time.
           </SectionDescription>
         </div>
         <div>
@@ -58,5 +58,3 @@ const AboutSection: React.FC = () => {
     </section>
   )
 }
-
-export default AboutSection

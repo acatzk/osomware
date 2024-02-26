@@ -1,6 +1,6 @@
 import { IList, ILink } from './type'
 
-export const values:IList[] = [
+export const values: IList[] = [
   {
     icon: '/svgs/values/values1.svg',
     text: 'Research and Discovery'
@@ -50,7 +50,7 @@ export const services = [
   }
 ]
 
-export const links:ILink[] = [
+export const links: ILink[] = [
   {
     text: 'Home',
     to: '/'

@@ -1,0 +1,12 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/*.md
+
+package-lock.json
+package.json
+yarn.lock
+
+.next
+next-env.d.ts

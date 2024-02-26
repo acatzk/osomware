@@ -1,25 +1,19 @@
-import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { FacebookLogo, TwitterLogo, InstagramLogo } from 'utils/Icons'
+import React, { ReactNode } from 'react'
 
-const Footer: React.FC = () => {
+import { FacebookLogo, TwitterLogo, InstagramLogo } from '~/utils/Icons'
+
+export default function Footer(): JSX.Element {
   return (
     <footer className="bg-gray-darker">
       <div className="hidden md:block">
         <div className="flex items-center justify-between py-14  mx-auto max-w-7xl px-6">
           <div className="flex-shrink-0">
-            <Image
-              width={190}
-              height={90}
-              src="/svgs/main-logo.svg"
-              alt="main-logo"
-            />
+            <Image width={190} height={90} src="/svgs/main-logo.svg" alt="main-logo" />
           </div>
           <div className="flex items-center space-x-6">
-            <h1 className="text-white text-lg font-medium">
-              Get a free consultation
-            </h1>
+            <h1 className="text-white text-lg font-medium">Get a free consultation</h1>
             <motion.button
               className="bg-primary-indigo hover:opacity-80 focus:opacity-100 text-white px-4 xl:px-12 py-3 rounded-lg text-lg font-medium focus:outline-none transition ease-in-out duration-200 hover:shadow-xl"
               whileHover={{ y: -4 }}
@@ -34,16 +28,9 @@ const Footer: React.FC = () => {
           <div className="col-span-2 md:col-auto">
             <div className="flex flex-col space-y-8">
               <div className="flex items-center justify-between">
-                <h1 className="text-xl text-white text-left mr-7">
-                  Subscribe to our news letter
-                </h1>
+                <h1 className="text-xl text-white text-left mr-7">Subscribe to our news letter</h1>
                 <div className="block md:hidden flex-shrink-0">
-                  <Image
-                    width={80}
-                    height={60}
-                    src="/svgs/main-logo2.svg"
-                    alt="logo-1"
-                  />
+                  <Image width={80} height={60} src="/svgs/main-logo2.svg" alt="logo-1" />
                 </div>
               </div>
               <div className="flex items-center border-b border-indigo-300 opacity-75 py-2">
@@ -57,14 +44,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-white space-y-4 text-sm">
             <h1 className="text-base font-semibold">Services</h1>
-            <LinkList
-              links={[
-                'Web Development',
-                'Web Design',
-                'UX/UI Design',
-                'Multimedia',
-              ]}
-            />
+            <LinkList links={['Web Development', 'Web Design', 'UX/UI Design', 'Multimedia']} />
           </div>
           <div className="text-white space-y-4 text-sm">
             <h1 className="text-base font-semibold">About</h1>
@@ -115,7 +95,7 @@ const Footer: React.FC = () => {
   )
 }
 
-function SocialButton({ children }) {
+function SocialButton({ children }: { children: ReactNode }): JSX.Element {
   return (
     <button
       className="p-2 hover:text-gray-400 rounded-full focus:outline-none transition ease-in-out duration-200"
@@ -126,7 +106,7 @@ function SocialButton({ children }) {
   )
 }
 
-function LinkList({ links }) {
+function LinkList({ links }: { links: string[] }): JSX.Element {
   return (
     <ul className="space-y-4">
       {links.map((link, i) => (
@@ -136,18 +116,12 @@ function LinkList({ links }) {
   )
 }
 
-function ListItem({ link }) {
+function ListItem({ link }: { link: string }): JSX.Element {
   return (
     <li>
-      <a
-        href="#"
-        className="hover:underline cursor-pointer"
-        aria-label="business-link"
-      >
+      <a href="#" className="hover:underline cursor-pointer" aria-label="business-link">
         {link}
       </a>
     </li>
   )
 }
-
-export default Footer
